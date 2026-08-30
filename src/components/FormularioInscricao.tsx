@@ -310,8 +310,8 @@ function Campo({
 }: {
   id: string;
   rotulo: string;
-  opcional?: boolean;
-  erro?: string;
+  opcional?: boolean | undefined;
+  erro?: string | undefined;
   children: React.ReactNode;
 }) {
   return (

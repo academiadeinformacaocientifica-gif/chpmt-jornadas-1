@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      inscricoes: {
+        Row: {
+          categoria_profissional: string
+          created_at: string
+          email: string
+          id: string
+          instituicao: string | null
+          nome_completo: string
+          qr_code_token: string
+          status_presenca: boolean
+          telefone: string
+        }
+        Insert: {
+          categoria_profissional: string
+          created_at?: string
+          email: string
+          id?: string
+          instituicao?: string | null
+          nome_completo: string
+          qr_code_token?: string
+          status_presenca?: boolean
+          telefone: string
+        }
+        Update: {
+          categoria_profissional?: string
+          created_at?: string
+          email?: string
+          id?: string
+          instituicao?: string | null
+          nome_completo?: string
+          qr_code_token?: string
+          status_presenca?: boolean
+          telefone?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

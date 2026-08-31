@@ -69,9 +69,6 @@ function LandingPage() {
             </p>
           </div>
           <div className="flex shrink-0 items-center gap-2">
-            <span className="hidden rounded-full bg-accent px-3 py-1.5 text-xs font-semibold text-accent-foreground sm:inline-flex">
-              1º Aniversário CHPMT
-            </span>
             <Button
               asChild
               size="sm"
@@ -80,9 +77,6 @@ function LandingPage() {
               <a href="#inscricao">Garantir Vaga</a>
             </Button>
           </div>
-        </div>
-        <div className="bg-accent px-4 py-1 text-center text-[11px] font-semibold text-accent-foreground sm:hidden">
-          1º Aniversário CHPMT
         </div>
       </header>
 

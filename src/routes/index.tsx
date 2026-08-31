@@ -9,7 +9,7 @@ import {
   Microscope,
   GraduationCap,
   Building2,
-  Sparkles,
+  
   QrCode,
 } from "lucide-react";
 
@@ -69,9 +69,6 @@ function LandingPage() {
             </p>
           </div>
           <div className="flex shrink-0 items-center gap-2">
-            <span className="hidden rounded-full bg-accent px-3 py-1.5 text-xs font-semibold text-accent-foreground sm:inline-flex">
-              1º Aniversário CHPMT
-            </span>
             <Button
               asChild
               size="sm"
@@ -80,9 +77,6 @@ function LandingPage() {
               <a href="#inscricao">Garantir Vaga</a>
             </Button>
           </div>
-        </div>
-        <div className="bg-accent px-4 py-1 text-center text-[11px] font-semibold text-accent-foreground sm:hidden">
-          1º Aniversário CHPMT
         </div>
       </header>
 
@@ -97,10 +91,7 @@ function LandingPage() {
             className="absolute inset-0 size-full object-cover opacity-25"
           />
           <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-            <span className="animate-rise inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-semibold text-accent-foreground">
-              <Sparkles className="size-3.5" /> 1º Aniversário · 2025 – 2026
-            </span>
-            <h1 className="animate-rise mt-6 max-w-3xl text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+            <h1 className="animate-rise max-w-3xl text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
               1ª Jornadas Científicas do Complexo Hospitalar Pedro Maria Tonha “Pedalé”
             </h1>
             <p className="animate-rise mt-4 max-w-2xl text-lg font-bold italic opacity-95 sm:text-2xl">

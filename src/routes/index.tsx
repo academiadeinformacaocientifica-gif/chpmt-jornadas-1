@@ -9,7 +9,7 @@ import {
   Microscope,
   GraduationCap,
   Building2,
-  Sparkles,
+  
   QrCode,
 } from "lucide-react";
 

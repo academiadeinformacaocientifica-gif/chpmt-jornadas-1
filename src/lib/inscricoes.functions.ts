@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import { z } from "zod";
 import { inscricaoSchema } from "./inscricao-schema";
 
 export const criarInscricao = createServerFn({ method: "POST" })
@@ -25,5 +26,22 @@ export const criarInscricao = createServerFn({ method: "POST" })
       return { ok: false as const, code: "erro" as const };
     }
 
+    return { ok: true as const, inscricao: row };
+  });
+
+export const obterInscricaoPorToken = createServerFn({ method: "GET" })
+  .inputValidator((input: unknown) => z.object({ token: z.string().uuid() }).parse(input))
+  .handler(async ({ data }) => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+
+    const { data: row, error } = await supabaseAdmin
+      .from("inscricoes")
+      .select(
+        "nome_completo, email, telefone, categoria_profissional, instituicao, qr_code_token, status_presenca, created_at",
+      )
+      .eq("qr_code_token", data.token)
+      .maybeSingle();
+
+    if (error || !row) return { ok: false as const };
     return { ok: true as const, inscricao: row };
   });
